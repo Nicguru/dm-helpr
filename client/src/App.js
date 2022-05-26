@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import AppNav from "./components/AppNav";
+import Footer from "./components/Footer";
+import Album from "./components/Album";
+import Dashboard from "./pages/Dashboard";
+import { Route, Routes } from "react-router-dom";
+import Community from "./pages/Community";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <AppNav />
+      <main className="mt-5 pt-4">
+        <Routes>
+          <Route path="/" element={<h2>Home Page</h2>} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/community" element={<Community />} />
+        </Routes>
+      </main>
+      <Footer />
+    </>
   );
 }
 
