@@ -13,12 +13,13 @@ import {
   Stack,
   Button,
 } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 const AppNav = () => {
   return (
     <header>
-      <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
+      <Navbar collapseOnSelect bg="dark" variant="dark" expand="lg" fixed="top">
         <Container>
-          <Navbar.Brand as={Nav.Link}>
+          <Navbar.Brand as={NavLink} to="/" href="/">
             <Stack direction="horizontal" gap={2}>
               <FontAwesomeIcon icon={faDiceD20} size="2x" />
               <span className="cinzel unselectable d-none d-md-block">
@@ -30,7 +31,7 @@ const AppNav = () => {
           <Navbar.Collapse>
             <Nav className="me-auto mt-3 mt-lg-0" variant="pills" justify>
               <Nav.Item>
-                <Nav.Link active>
+                <Nav.Link as={NavLink} to="/dashboard" href="/dashboard">
                   <FontAwesomeIcon
                     icon={faDungeon}
                     size="xl"
@@ -40,7 +41,7 @@ const AppNav = () => {
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link>
+                <Nav.Link as={NavLink} to="/community" href="/community">
                   <FontAwesomeIcon
                     icon={faStore}
                     size="xl"
@@ -50,7 +51,7 @@ const AppNav = () => {
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link>
+                <Nav.Link disabled>
                   <FontAwesomeIcon
                     icon={faDice}
                     size="xl"
