@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const Community = () => {
+  useEffect(() => {
+    document.title = "Community";
+  }, []);
+
   return (
     <div>
       <section className="py-5 text-center container">
