@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@900&display=swap");
+
 html,
 body,
 #root {
@@ -9,6 +11,22 @@ code {
     monospace;
 }
 
+.cinzel {
+  font-family: "Cinzel Decorative", cursive;
+}
+
+.unselectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+
+  /*
+    Introduced in IE 10.
+    See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+  */
+  -ms-user-select: none;
+  user-select: none;
+}
 /* .footer {
   position: fixed;
   bottom: 0;
